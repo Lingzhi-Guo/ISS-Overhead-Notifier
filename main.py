@@ -42,7 +42,7 @@ def judge_time():
 
 while True:
     time.sleep(60)
-    if is_iss_overhead() and is_night():
+    if judge_position() and judge_time():
         connection = smtplib.SMTP("__YOUR_SMTP_ADDRESS_HERE___")
         connection.starttls()
         connection.login(MY_EMAIL, MY_PASSWORD)
